@@ -1,6 +1,5 @@
-x_speed = 0; // reset horizontal speed 
-
-y_speed += grav; // add gravity to y_speed
+x_speed = 0;
+y_speed = 0;
 
 if keyboard_check(vk_right) { // if the right arrow key is pressed
 
@@ -10,46 +9,37 @@ if keyboard_check(vk_right) { // if the right arrow key is pressed
 
     x_speed = -movement_speed; // set the horizontal speed to negative heidi's movement_speed, making her move left
 
+} else if keyboard_check(vk_up){
+	y_speed = movement_speed;
+} else if keyboard_check(vk_down){
+	y_speed = -movement_speed;
 }
 
-if (place_meeting(x, y + 1, oSolid)) { // if heidi is on the ground
-
-    if (keyboard_check_pressed(vk_up)) { // and the up arrow key is pressed
-
-        y_speed = -10; // make heidi jump by setting her y_speed to a negative value
-
-    } else { // otherwise, if heidi is on the ground but not jumping
-
-        y_speed = 0; // set her y_speed to 0 so she doesn't fall through the ground
-
-    }
-
+if(place_meeting(x+x_speed,y,oSolid)){
+	while(!place_meeting(x+sign(x_speed), y, oSolid)){
+		x++;
+	}
+	x_speed=0;
+}
+if (place_meeting(x,y+y_speed,oSolid)){
+	while(!place_meeting(x, y+sign(y_speed), oSolid)){
+		y++;
+	}
+	y_speed=0;
 }
 
-if (place_meeting(x, y, oSpikes)) { // if heidi collides with the spikes
 
-    room_restart() // restart the level
 
+if (place_meeting(x,y,oEnemiesParent)){
+	damageTaken = other.damage;
+	hp-=damageTaken;
+	
 }
 
-if (y > room_height or y < 0 or x > room_width or x < 0) { // if the player is outside of the room
 
-    room_restart(); 
 
-}
+x+=x_speed;
+y+=y_speed;
 
-if keyboard_check(vk_right) {
-
-    x_speed = movement_speed; 
-
-    image_xscale = -1; // flip heidi's sprite so she faces right
-
-} else if keyboard_check(vk_left) {
-
-    x_speed = -movement_speed; 
-
-    image_xscale = 1; // reset her sprite so she faces left
-
-}
-
-move_and_collide(x_speed, y_speed, oSolid);
+x=clamp(x,0,room_width - (sprite_width/2));
+y=clamp(y,0,room_height - (sprite_height/2));
