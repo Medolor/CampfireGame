@@ -24,7 +24,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.4.1003",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"CampfireGame",
   "resources":[
@@ -42,6 +42,10 @@
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"id":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
+    {"id":{"name":"sBoundary","path":"sprites/sBoundary/sBoundary.yy",},},
+    {"id":{"name":"sEnemy","path":"sprites/sEnemy/sEnemy.yy",},},
+    {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sTile","path":"sprites/sTile/sTile.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
