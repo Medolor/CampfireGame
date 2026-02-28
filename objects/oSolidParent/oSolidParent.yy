@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oFollowplayerParent",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oSolidParent",
+  "eventList":[],
   "managed":true,
-  "name":"oFollowplayerParent",
+  "name":"oSolidParent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Object/Enemies.yy",
+    "name":"Object",
+    "path":"folders/Object.yy",
   },
   "parentObjectId":null,
   "persistent":false,

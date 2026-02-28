@@ -15,20 +15,25 @@ if keyboard_check(vk_right) { // if the right arrow key is pressed
 	y_speed = -movement_speed;
 }
 
-if(place_meeting(x+x_speed,y,oSolid)){
-	while(!place_meeting(x+sign(x_speed), y, oSolid)){
+if(place_meeting(x+x_speed,y,oSolidParent)){
+	while(!place_meeting(x+sign(x_speed), y, oSolidParent)){
 		x += sign(x_speed);
 	}
 	x_speed=0;
 }
-if (place_meeting(x,y+y_speed,oSolid)){
-	while(!place_meeting(x, y+sign(y_speed), oSolid)){
+if (place_meeting(x,y+y_speed,oSolidParent)){
+	while(!place_meeting(x, y+sign(y_speed), oSolidParent)){
 		y += sign(y_speed);
 	}
 	y_speed=0;
 }
 
-
+if (hp <= 0){
+	visible = false;
+	x_speed = 0;
+	y_speed = 0;
+	room_goto(rm_gameOver);
+}
 
 x+=x_speed;
 y+=y_speed;
