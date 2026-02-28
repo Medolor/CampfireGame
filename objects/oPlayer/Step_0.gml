@@ -10,9 +10,9 @@ if keyboard_check(vk_right) { // if the right arrow key is pressed
     x_speed = -movement_speed; // set the horizontal speed to negative heidi's movement_speed, making her move left
 
 } else if keyboard_check(vk_up){
-	y_speed = movement_speed;
-} else if keyboard_check(vk_down){
 	y_speed = -movement_speed;
+} else if keyboard_check(vk_down){
+	y_speed = movement_speed;
 }
 
 if(place_meeting(x+x_speed,y,oSolidParent)){

@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oPlay",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oTile",
+  "eventList":[],
   "managed":true,
-  "name":"oPlay",
+  "name":"oTile",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu",
-    "path":"folders/Object/Menu.yy",
+    "name":"Object",
+    "path":"folders/Object.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oSolidParent",
+    "path":"objects/oSolidParent/oSolidParent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sTile",
+    "path":"sprites/sTile/sTile.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -60,3 +60,20 @@ Temporary Items
 
 # GMRT build directory
 Build
+
+
+# GameMaker Temporary/Generated Files
+*.yyz
+*.temp
+/options/main/inherited/
+/export/
+/html5game/
+/.pdm/
+
+# User-specific settings
+/local_settings.json
+/ui_settings.json
+
+# Cache and Logs
+/cache/
+/logs/

@@ -1,5 +1,5 @@
 if (place_meeting(x,y,oDamageParent)){
-	damageTaken = other.damage;
+	var damageTaken = other.damage;
 	hp-=damageTaken;
 	
 }
