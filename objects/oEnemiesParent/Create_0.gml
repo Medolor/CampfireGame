@@ -2,4 +2,7 @@ var hp = hpMax;
 var target_x = x;
 var target_y = y;
 
-alarm[0] = 60;
+var x_speed = movement_speed;
+var y_speed = movement_speed;
+
+var canFollow = false;
