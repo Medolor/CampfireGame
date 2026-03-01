@@ -7,16 +7,14 @@
   ],
   "managed":true,
   "name":"oEnemiesParent",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oDamageParent","path":"objects/oDamageParent/oDamageParent.yy",},"propertyId":{"name":"damage","path":"objects/oDamageParent/oDamageParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"Enemies",
     "path":"folders/Object/Enemies.yy",
   },
   "parentObjectId":{
-    "name":"oDamageParent",
-    "path":"objects/oDamageParent/oDamageParent.yy",
+    "name":"oSolidParent",
+    "path":"objects/oSolidParent/oSolidParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
