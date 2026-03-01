@@ -35,6 +35,34 @@ if (hp <= 0){
 	room_goto(rm_gameOver);
 }
 
+// Damage
+// Step Event
+
+// Reduce cooldown timer
+if (attack_timer > 0) {
+    attack_timer -= delta_time / 1000; // delta_time is in milliseconds
+}
+
+// Detect left mouse click and cooldown
+if (mouse_check_button_pressed(mb_left) && attack_timer <= 0) {
+    attack_timer = attack_cooldown; // Reset cooldown
+
+    // Loop through all instances of the parent enemy object
+    var count = instance_number(oEnemiesParent);
+    for (var i = 0; i < count; i++) {
+        var inst = instance_find(oEnemiesParent, i); // Get the i-th enemy
+        if (inst != noone) {
+            var dist = point_distance(x, y, inst.x, inst.y);
+            if (dist <= attack_range) {
+                inst.hp -= attack_damage; // Apply damage
+                if (inst.hp <= 0) {
+                    instance_destroy(inst);
+                }
+            }
+        }
+    }
+}
+
 x+=x_speed;
 y+=y_speed;
 

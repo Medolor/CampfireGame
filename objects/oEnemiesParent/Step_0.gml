@@ -28,5 +28,18 @@ if (place_meeting(x,y+y_speed,oSolidParent)){
 	y_speed=0;
 }
 
+// Step Event
+if (mouse_check_button_pressed(mb_left)) {   // Left mouse click
+    // Check if the mouse is over this enemy
+    if (position_meeting(mouse_x, mouse_y, id)) {
+        hp -= 1;  // Subtract 1 HP
+    }
+}
+
+// Destroy enemy if health reaches 0
+if (hp <= 0) {
+    instance_destroy();
+}
+
 x+=x_speed;
 y+=y_speed;
