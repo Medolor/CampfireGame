@@ -1,7 +1,7 @@
 event_inherited(); 
-x_speed = movement_speed;
-y_speed = movement_speed;
+x_speed = 0;
+y_speed = 0;
 
-var canFollow = false;
+canFollow = true;
 
 

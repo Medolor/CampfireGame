@@ -8,7 +8,8 @@
   "managed":true,
   "name":"oFollowEnemy",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemiesParent","path":"objects/oEnemiesParent/oEnemiesParent.yy",},"propertyId":{"name":"maxRange","path":"objects/oEnemiesParent/oEnemiesParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"150",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemiesParent","path":"objects/oEnemiesParent/oEnemiesParent.yy",},"propertyId":{"name":"maxRange","path":"objects/oEnemiesParent/oEnemiesParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"300",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oDamageParent","path":"objects/oDamageParent/oDamageParent.yy",},"propertyId":{"name":"damage","path":"objects/oDamageParent/oDamageParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"Enemies",

@@ -3,15 +3,20 @@ event_inherited();
 
 x_speed = 0;
 y_speed = 0;
-if (instance_exists(oPlayer)){
-	var dirToPlayer = point_direction(x,y,oPlayer.x,oPlayer.y);
-	var disToPlayer = point_distance(x,y,oPlayer.x,oPlayer.y);
-	if (disToPlayer <= maxRange && disToPlayer >= oPlayer.collision_space){
-		x_speed = lengthdir_x(movement_speed, dirToPlayer);
-		y_speed = lengthdir_y(movement_speed, dirToPlayer);
-	}
+
+
+//*IMPORTANT: // you might need to implement a motion planning gride if we are adding objects to the level. 
+// Chagne the code if you are
+if (instance_exists(oPlayer) && canFollow) {
+    var _dir = point_direction(x, y, oPlayer.x, oPlayer.y);
+    var _dis = point_distance(x, y, oPlayer.x, oPlayer.y);
+    //you can implement pushihng here
+    if (_dis <= maxRange && _dis >= 20) {
+        x_speed = lengthdir_x(movement_speed, _dir);
+        y_speed = lengthdir_y(movement_speed, _dir);
+    }
 }
-// you might need to implement a motion planning gride if we are adding objects to the level.
+
 
 if(place_meeting(x+x_speed,y,oSolidParent)){
 	while(!place_meeting(x+sign(movement_speed), y, oSolidParent)){

@@ -7,4 +7,4 @@ movement_speed = 1;
 hp = healthMax;
 
 canBeHit = true;
-delay = 60;
+delay = 20;

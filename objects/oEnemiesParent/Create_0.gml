@@ -1,1 +1,1 @@
-var hp = hpMax;
+hp = hpMax;
