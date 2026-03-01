@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_display_cards",
+  "%Name":"ApplyCard",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_display_cards",
+  "name":"ApplyCard",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

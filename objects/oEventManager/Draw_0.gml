@@ -1,32 +1,27 @@
-// Draw Event of oEventManager
-switch (global.current_state) {
-    case game_state.MAIN_MENU:
-        draw_text(room_width / 2, room_height / 2, "Press Space to Start");
-        break;
+if (global.current_state == game_state.INTERMISSION) {
 
-    case game_state.COMBAT:
-        var minutes = floor(global.elapsed_time / 60);
-        var seconds = floor(global.elapsed_time mod 60);
-        var time_str = string(minutes, 2) + ":" + string(seconds, 2);
-        var full_text = "Time: " + time_str;
-        draw_text(room_width / 2 - string_width(full_text) / 2, room_height / 2, full_text);
-        break;
+    // Calculate total width for centering
+    var total_width = 0;
+    for (var i = 0; i < array_length(cards); i++) {
+        total_width += sprite_get_width(cards[i][? "sprite"]);
+        if (i > 0) total_width += card_spacing;
+    }
 
-    case game_state.PAUSE:
-        draw_text(room_width / 2, room_height / 2, "Game Paused. Press P to Resume");
-        break;
+    var start_x = (320 - total_width) / 2;
+    var x_pos = start_x;
 
-    case game_state.INTERMISSION:
-        // Call the script to draw cards in the INTERMISSION state
-        scr_display_cards();  // Calling the script here
-        break;
+    // Draw each card
+    for (var i = 0; i < array_length(cards); i++) {
+        var spr = cards[i][? "sprite"];
+        var w = sprite_get_width(spr);
+        var h = sprite_get_height(spr);
 
-    case game_state.GAME_OVER:
-        draw_text(room_width / 2, room_height / 2, "Game Over! Press R to Restart");
-        var minutes = floor(global.elapsed_time / 60);
-        var seconds = floor(global.elapsed_time mod 60);
-        var time_str = string(minutes, 2) + ":" + string(seconds, 2);
-        var full_text = "Time: " + time_str;
-        draw_text(room_width / 2 - string_width(full_text) / 2, room_height / 2 + 20, full_text);
-        break;
+        draw_sprite(spr, 0, x_pos + w/2, card_start_y); // draw centered
+        x_pos += w + card_spacing;
+
+        // Optional: draw card name below
+        draw_set_font(fntSilver);
+        draw_set_color(c_white);
+        draw_text(x_pos - w - w/2, card_start_y + h/2 + 5, cards[i][? "name"]);
+    }
 }

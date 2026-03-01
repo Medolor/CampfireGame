@@ -54,7 +54,7 @@ if (mouse_check_button_pressed(mb_left) && attack_timer <= 0) {
         if (inst != noone) {
             var dist = point_distance(x, y, inst.x, inst.y);
             if (dist <= attack_range) {
-                inst.hp -= attack_damage; // Apply damage
+                inst.hp -= global.attack_damage; // Apply damage
                 if (inst.hp <= 0) {
                     instance_destroy(inst);
                 }
