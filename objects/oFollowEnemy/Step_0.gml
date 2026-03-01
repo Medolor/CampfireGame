@@ -3,16 +3,10 @@ event_inherited();
 
 x_speed = 0;
 y_speed = 0;
-if (canFollow && instance_exists(oPlayer)){
-	var dirToPlayer = point_distance(x,y,oPlayer.x,oPlayer.y);
-	var disToPlayer = point_distance(x,y,oPlayer.x,oPlayer.y);
-	if (disToPlayer <= maxRange){
-		x_speed = lengthdir_x(movement_speed, dirToPlayer);
-		y_speed = lengthdir_y(movement_speed, dirToPlayer);
-	}else {
-		x_speed = 0;
-		y_speed = 0;
-	}
+if (instance_exists(oPlayer)){
+	var dirToPlayer = point_direction(x,y,oPlayer.x,oPlayer.y);
+	x_speed = lengthdir_x(movement_speed, dirToPlayer);
+	y_speed = lengthdir_y(movement_speed, dirToPlayer);
 }
 
 // you might need to implement a motion planning gride if we are adding objects to the level.
