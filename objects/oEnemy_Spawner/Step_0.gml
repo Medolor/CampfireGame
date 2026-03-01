@@ -1,4 +1,5 @@
-if (enemies_spawned < enemies_to_spawn)
+if (global.current_state == game_state.COMBAT)
+{ if (enemies_spawned < enemies_to_spawn)
 {
     spawn_timer++;
 
@@ -21,6 +22,9 @@ else
     {
         wave++;
         enemies_to_spawn += 3;
+		spawn_delay *= 0.9;
         enemies_spawned = 0;
+		global.current_state = game_state.INTERMISSION
     }
+}
 }

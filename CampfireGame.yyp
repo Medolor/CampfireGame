@@ -36,6 +36,7 @@
     {"id":{"name":"oEnemiesParent","path":"objects/oEnemiesParent/oEnemiesParent.yy",},},
     {"id":{"name":"oEnemy_Spawner","path":"objects/oEnemy_Spawner/oEnemy_Spawner.yy",},},
     {"id":{"name":"oEnemySpawn","path":"objects/oEnemySpawn/oEnemySpawn.yy",},},
+    {"id":{"name":"oEventManager","path":"objects/oEventManager/oEventManager.yy",},},
     {"id":{"name":"oFollowEnemy","path":"objects/oFollowEnemy/oFollowEnemy.yy",},},
     {"id":{"name":"oPlay","path":"objects/oPlay/oPlay.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
