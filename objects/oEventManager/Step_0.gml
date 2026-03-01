@@ -4,7 +4,7 @@ switch (global.current_state)
     case game_state.MAIN_MENU:
         // Do main menu logic
         if (keyboard_check_pressed(vk_space)) {
-            global.current_state = game_state.COMBAT;
+            global.current_state = game_state.INTERMISSION;
             global.elapsed_time = 0;  // Reset timer
         }
         break;
