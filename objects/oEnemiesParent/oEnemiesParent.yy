@@ -8,7 +8,9 @@
   ],
   "managed":true,
   "name":"oEnemiesParent",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oDamageParent","path":"objects/oDamageParent/oDamageParent.yy",},"propertyId":{"name":"movement_speed","path":"objects/oDamageParent/oDamageParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+  ],
   "parent":{
     "name":"Enemies",
     "path":"folders/Object/Enemies.yy",
@@ -32,8 +34,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"hpMax","filters":[],"listItems":[],"multiselect":false,"name":"hpMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"10","varType":0,},
-    {"$GMObjectProperty":"v2","%Name":"movement_speed","filters":[],"listItems":[],"multiselect":false,"name":"movement_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":0,},
-    {"$GMObjectProperty":"v2","%Name":"maxRange","filters":[],"listItems":[],"multiselect":false,"name":"maxRange","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"80.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"maxRange","filters":[],"listItems":[],"multiselect":false,"name":"maxRange","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

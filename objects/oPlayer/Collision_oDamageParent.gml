@@ -4,8 +4,8 @@ if (canBeHit){
 		var damageTaken = other.damage;
 		hp-=damageTaken;
 		canBeHit = false;
-		alarm[0] = delay;
 		image_alpha = 0.5;
+		alarm[0] = delay;
 	}
 }
 
